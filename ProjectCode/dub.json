@@ -1,0 +1,38 @@
+{
+	"authors": [
+		"Team BYYZ"
+	],
+	"configurations": [
+		{
+            "name": "docs"
+        },
+		{
+			"name": "executable",
+			"targetType": "executable"
+		},
+		{
+			"dependencies": {
+				"bindbc-sdl": "~>1.2.4",
+				"unit-threaded": "~>2.1.2"
+			},
+			"excludedSourceFiles": [
+				"source/app.d"
+			],
+			"mainSourceFile": "bin/ut.d",
+			"name": "unittest",
+			"preBuildCommands": [
+				"dub run unit-threaded -c gen_ut_main -- -f bin/ut.d -d dub"
+			],
+			"targetType": "executable"
+		}
+	],
+	"copyright": "Copyright © 2023, Mengxiao Zhao",
+	"dependencies": {
+		"bindbc-sdl": "~>1.2.4"
+	},
+	"description": "A minimal D application.",
+	"license": "proprietary",
+	"name": "graphics_project",
+	"targetPath": "bin",
+	"targetType": "executable"
+}

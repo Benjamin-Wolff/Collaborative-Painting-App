@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <title>Server (Server.Server)</title>
+	<meta charset="utf-8" />
+	<meta content="width=device-width, initial-scale=1" name="viewport" />
+        <link href="style.css" rel="stylesheet" />
+        <script src="script.js" type="text/javascript"></script>
+
+	
+	<link href="search-results.html" rel="prefetch" />
+</head>
+<body>
+	<div id="page-header">
+		<div id="logotype">
+		<span>Documentation</span>
+		<nav>
+			<a href="http://dlang.org/">Dlang.org</a>
+		</nav>
+		</div>
+
+		<form action="search-docs.html" id="search">
+			<input name="searchTerm" placeholder="Find a symbol name..." type="search" />
+			<input type="submit" value="Go" />
+		</form>
+	</div>
+	<div id="page-body">
+		<div id="page-content">
+		<h1>Server</h1><div class="breadcrumbs"><a class="breadcrumb" href="_Server.html">Server</a> </div><div><div class="documentation-comment synopsis"><div><p>Server is responsible for tansmit packets to other clients</p></div></div></div><div class="annotated-prototype"><div class="aggregate-prototype"><div class="attributes"></div><span class="builtin-type">class</span> Server  {<div class="aggregate-member"><div class="attributes"></div><tt class="highlighted"><span class="hid">Socket</span></tt> <span class="name">s_sock</span>;</div><div class="aggregate-member"><div class="attributes"></div><tt class="highlighted"><span class="type">ushort</span></tt> <span class="name">s_portNumber</span>;</div><div class="aggregate-member"><div class="attributes"></div><tt class="highlighted"><span class="type">string</span></tt> <span class="name">s_host</span>;</div><div class="aggregate-member"><div class="attributes"></div><tt class="highlighted"><span class="type">ushort</span></tt> <span class="name">s_clientNumber</span>;</div><div class="aggregate-member"><div class="attributes"></div><span class="builtin-type">auto</span> <span class="name">readSet</span>;</div><div class="aggregate-member"><div class="attributes"></div><tt class="highlighted"><span class="hid">Socket</span>[]</tt> <span class="name">connectedClientsList</span>;</div><div class="aggregate-member"><div class="attributes"></div><tt class="highlighted"><span class="hid">Packet</span>[]</tt> <span class="name">history_stack</span>;</div><div class="aggregate-member"><div class="attributes"></div><tt class="highlighted"><span class="type">bool</span></tt> <span class="name">serverIsRunning</span>;</div><div class="aggregate-member"><div class="attributes"></div><tt class="highlighted"><span class="type">ubyte</span>[<span class="hid">Packet</span>.<span class="hid">sizeof</span>]</tt> <span class="name">buffer</span>;</div><div class="aggregate-member"><a href="_Server._Server.this.html"><span class="lang-feature name">this</span>(string hostname, ushort portNumber, ushort clientNumber);</a></div><div class="aggregate-member"><a href="_Server._Server.run_Server.html"><tt class="highlighted"><span class="type">void</span></tt> <span class="name">runServer</span>();</a></div><div class="aggregate-member"><a href="_Server._Server.client_Loop.html"><tt class="highlighted"><span class="type">void</span></tt> <span class="name">clientLoop</span>();</a></div><div class="aggregate-member"><a href="_Server._Server.broadcast_To_All_Clients.html"><tt class="highlighted"><span class="type">void</span></tt> <span class="name">broadcastToAllClients</span>(Packet packet);</a></div>}</div></div><h2 id="constructors"><a class="header-anchor" href="#constructors">Constructors</a></h2><dl class="member-list constructors"><dt><a href="_Server._Server.this.html">this</a><div class="simplified-prototype" style="max-width: 67ch;"><span class="lang-feature name">this</span>(string hostname, ushort portNumber, ushort clientNumber)</div></dt><dd><div><p>Constructor for server, inputting a valid host address and port number</p></div></dd></dl><h2 id="destructor"><a class="header-anchor" href="#destructor">Destructor</a></h2><dl class="member-list"></dl><p>A destructor is present on this object, but not explicitly documented in the source.</p><h2 id="members"><a class="header-anchor" href="#members">Members</a></h2><h3 class="member-list-header hide-from-toc" id="function"><a class="header-anchor" href="#function">Functions</a></h3><dl class="member-list native"><dt><a href="_Server._Server.broadcast_To_All_Clients.html">broadcastToAllClients</a><div class="simplified-prototype" style="max-width: 45ch;"><tt class="highlighted"><span class="type">void</span></tt> <span class="name">broadcastToAllClients</span>(Packet packet)</div></dt><dd><div><p>This method takes the input packet and pass it to all active client.</p></div></dd><dt><a href="_Server._Server.client_Loop.html">clientLoop</a><div class="simplified-prototype" style="max-width: 18ch;"><tt class="highlighted"><span class="type">void</span></tt> <span class="name">clientLoop</span>()</div></dt><dd><div><p>This is the client loop.</p></div></dd><dt><a href="_Server._Server.run_Server.html">runServer</a><div class="simplified-prototype" style="max-width: 17ch;"><tt class="highlighted"><span class="type">void</span></tt> <span class="name">runServer</span>()</div></dt><dd><div><p>Start running server.</p></div></dd></dl><div></div></div>
+		<div id="page-nav"><a class="parent" href="_Server.html">Server</a> 
+		<span class="type-separator">classes</span><ul><li><a class="class current" href="_Server._Server.html">Server</a></li></ul></div>
+	</div>
+	<div id="page-footer">Page generated by <a href="https://github.com/adamdruppe/adrdox">adrdox</a></div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <title>Client (Client.Client)</title>
+	<meta charset="utf-8" />
+	<meta content="width=device-width, initial-scale=1" name="viewport" />
+        <link href="style.css" rel="stylesheet" />
+        <script src="script.js" type="text/javascript"></script>
+
+	
+	<link href="search-results.html" rel="prefetch" />
+</head>
+<body>
+	<div id="page-header">
+		<div id="logotype">
+		<span>Documentation</span>
+		<nav>
+			<a href="http://dlang.org/">Dlang.org</a>
+		</nav>
+		</div>
+
+		<form action="search-docs.html" id="search">
+			<input name="searchTerm" placeholder="Find a symbol name..." type="search" />
+			<input type="submit" value="Go" />
+		</form>
+	</div>
+	<div id="page-body">
+		<div id="page-content">
+		<h1>Client</h1><div class="breadcrumbs"><a class="breadcrumb" href="_Client.html">Client</a> </div><div><div class="documentation-comment synopsis"><div><p>Client class: responsible for drawing and interaction with server</p></div></div></div><div class="annotated-prototype"><div class="aggregate-prototype"><div class="attributes"></div><span class="builtin-type">class</span> Client  {<div class="aggregate-member"><div class="attributes"></div><tt class="highlighted"><span class="type">bool</span></tt> <span class="name">isConnected</span>;</div><div class="aggregate-member"><div class="attributes"></div><tt class="highlighted"><span class="hid">TcpSocket</span></tt> <span class="name">socket</span>;</div><div class="aggregate-member"><div class="attributes"></div><tt class="highlighted"><span class="hid">SDL_Surface</span>*</tt> <span class="name">imgSurface</span>;</div><div class="aggregate-member"><div class="attributes"></div><tt class="highlighted"><span class="type">bool</span></tt> <span class="name">runApplication</span>;</div><div class="aggregate-member"><div class="attributes"></div><tt class="highlighted"><span class="hid">SDL_Window</span>*</tt> <span class="name">window</span>;</div><div class="aggregate-member"><div class="attributes"></div><tt class="highlighted"><span class="hid">ButtonChoices</span></tt> <span class="name">colorChoices</span>;</div><div class="aggregate-member"><div class="attributes"></div><tt class="highlighted"><span class="hid">Slider</span></tt> <span class="name">brushSlider</span>;</div><div class="aggregate-member"><div class="attributes"></div><tt class="highlighted"><span class="type">bool</span></tt> <span class="name">drawing</span>;</div><div class="aggregate-member"><div class="attributes"></div><tt class="highlighted"><span class="type">bool</span></tt> <span class="name">purple</span>;</div><div class="aggregate-member"><div class="attributes"></div><tt class="highlighted"><span class="type">bool</span></tt> <span class="name">yellow</span>;</div><div class="aggregate-member"><div class="attributes"></div><tt class="highlighted"><span class="type">int</span></tt> <span class="name">brushSize</span>;</div><div class="aggregate-member"><div class="attributes"></div><span class="builtin-type">auto</span> <span class="name">commands</span>;</div><div class="aggregate-member"><div class="attributes"></div><tt class="highlighted"><span class="type">char</span>[]</tt> <span class="name">user</span>;</div><div class="aggregate-member"><a href="_Client._Client.this.html"><span class="lang-feature name">this</span>(string host, ushort port);</a></div><div class="aggregate-member"><a href="_Client._Client.receiving_thread.html"><tt class="highlighted"><span class="type">void</span></tt> <span class="name">receiving_thread</span>();</a></div><div class="aggregate-member"><a href="_Client._Client.working_thread.html"><tt class="highlighted"><span class="type">void</span></tt> <span class="name">working_thread</span>();</a></div><div class="aggregate-member"><a href="_Client._Client.run.html"><tt class="highlighted"><span class="type">void</span></tt> <span class="name">run</span>();</a></div>}</div></div><h2 id="constructors"><a class="header-anchor" href="#constructors">Constructors</a></h2><dl class="member-list constructors"><dt><a href="_Client._Client.this.html">this</a><div class="simplified-prototype" style="max-width: 33ch;"><span class="lang-feature name">this</span>(string host, ushort port)</div></dt><dd><div><p>Initialize client app</p></div></dd></dl><h2 id="destructor"><a class="header-anchor" href="#destructor">Destructor</a></h2><dl class="member-list"></dl><p>A destructor is present on this object, but not explicitly documented in the source.</p><h2 id="members"><a class="header-anchor" href="#members">Members</a></h2><h3 class="member-list-header hide-from-toc" id="function"><a class="header-anchor" href="#function">Functions</a></h3><dl class="member-list native"><dt><a href="_Client._Client.receiving_thread.html">receiving_thread</a><div class="simplified-prototype" style="max-width: 25ch;"><tt class="highlighted"><span class="type">void</span></tt> <span class="name">receiving_thread</span>()</div></dt><dd><div><p>Receiving thread: keep receiving packets, and push into command queue</p></div></dd><dt><a href="_Client._Client.run.html">run</a><div class="simplified-prototype" style="max-width: 11ch;"><tt class="highlighted"><span class="type">void</span></tt> <span class="name">run</span>()</div></dt><dd><div><p>Main thread: run the client application, keeps listening to user interactions</p></div></dd><dt><a href="_Client._Client.working_thread.html">working_thread</a><div class="simplified-prototype" style="max-width: 23ch;"><tt class="highlighted"><span class="type">void</span></tt> <span class="name">working_thread</span>()</div></dt><dd><div><p>Working thread: processing packets from shared command_queue, and executing commands</p></div></dd></dl><div></div></div>
+		<div id="page-nav"><a class="parent" href="_Client.html">Client</a> 
+		<span class="type-separator">classes</span><ul><li><a class="class current" href="_Client._Client.html">Client</a></li><li><a class="class" href="_Client._Safe_Deque.html">SafeDeque</a></li></ul></div>
+	</div>
+	<div id="page-footer">Page generated by <a href="https://github.com/adamdruppe/adrdox">adrdox</a></div>
+</body>
+</html>
